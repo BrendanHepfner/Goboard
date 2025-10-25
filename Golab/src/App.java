@@ -56,7 +56,7 @@ public class App {
                 territorycheck(xcord,ycord-1);
             }
         }
-        if (beenChecked[xcord][ycord+1]==false && ycord != 9){
+        if (beenChecked[xcord][ycord+1]==false && ycord != 8){
             beenChecked[xcord][ycord+1] = true;
             if (GoBoard[xcord][ycord+1].equals("-*")){
                 btimesbordered++;
@@ -68,7 +68,7 @@ public class App {
                 territorycheck(xcord,ycord+1);
             }
         }
-        if (beenChecked[xcord+1][ycord]==false && xcord != 9){
+        if (beenChecked[xcord+1][ycord]==false && xcord != 8){
             beenChecked[xcord+1][ycord] = true;
             if (GoBoard[xcord+1][ycord].equals("-*")){
                 btimesbordered++;
@@ -184,10 +184,10 @@ public class App {
         if (directionFrom.equals("below")== false && ycord != 0){
             blw = nexttomecheck(xcord, ycord-1, pieceColor, "below");
         }
-        if (directionFrom.equals("above")==false && ycord != 9){
+        if (directionFrom.equals("above")==false && ycord != 8){
             abv = nexttomecheck(xcord, ycord+1, pieceColor, "above");
         }
-        if (directionFrom.equals("right")==false && xcord != 9){
+        if (directionFrom.equals("right")==false && xcord != 8){
             rgh = nexttomecheck(xcord+1, ycord, pieceColor, "right");
         }
         if (directionFrom.equals("left")==false && xcord != 0){
@@ -266,3 +266,4 @@ public class App {
     }
 
 }
+
